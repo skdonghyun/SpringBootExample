@@ -16,7 +16,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Member {
 
     @Id @GeneratedValue
@@ -31,5 +32,6 @@ public class Member {
     @JsonIgnore
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
+
 
 }
